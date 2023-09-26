@@ -13,7 +13,12 @@ import javafx.application.Platform;
 public class AppData {
 
     private static AppData instance = null;
-
+    public boolean readyConsoles = false;
+    public boolean readyJocs = false;
+    public boolean readyPersonatges = false;
+    public JSONArray dataConsoles = null;
+    public JSONArray dataJocs = null;
+    public JSONArray dataPersonatges = null;
     private AppData() { }
 
     public static AppData getInstance() {
