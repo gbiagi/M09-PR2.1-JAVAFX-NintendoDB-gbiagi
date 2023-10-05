@@ -110,6 +110,7 @@ public class ControllerDesktop implements Initializable {
 
         // Esborrar la informació actual
         info.getChildren().clear();
+
         // Carregar la llista amb les dades
         try {
             FXMLLoader loader = new FXMLLoader(resource);
@@ -118,7 +119,9 @@ public class ControllerDesktop implements Initializable {
             itemController.setImage("assets/images/" + dades.getString("imatge"));
             itemController.setTitle(dades.getString("nom"));
             switch (type) {
-                case "Consoles": itemController.setText(dades.getString("procesador")); break;
+                case "Consoles":
+                    itemController.setText(dades.getString("procesador"));
+                    break;
                 case "Jocs": itemController.setText(dades.getString("descripcio")); break;
                 case "Personatges": itemController.setText(dades.getString("nom_del_videojoc")); break;
             }
