@@ -106,7 +106,7 @@ public class ControllerDesktop implements Initializable {
         JSONObject dades = appData.getItemData(type, index);
 
         // Carregar la plantilla
-        URL resource = this.getClass().getResource("assets/template_info_item.fxml");
+        URL resource = this.getClass().getResource("assets/template_info_item_joc.fxml");
 
         // Esborrar la informació actual
         info.getChildren().clear();
