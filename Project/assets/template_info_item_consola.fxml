@@ -5,19 +5,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerInfoItem">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerInfoItem">
    <children>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0">
          <children>
             <ImageView fx:id="img" fitHeight="175.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </ImageView>
-            <Label fx:id="title" alignment="CENTER" text="Label" textAlignment="CENTER">
+            <Label fx:id="title" alignment="CENTER" text="Titulo" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -25,12 +25,30 @@
                   <Insets top="25.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="text" alignment="TOP_CENTER" prefHeight="172.0" text="En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor." wrapText="true">
+            <Rectangle fx:id="cuadradoColor" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="30.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Rectangle>
+            <Label fx:id="text1" alignment="CENTER" text="Any" textAlignment="CENTER">
                <font>
-                  <Font size="16.0" />
+                  <Font size="20.0" />
                </font>
                <VBox.margin>
-                  <Insets left="25.0" right="25.0" top="25.0" />
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="text2" alignment="CENTER" text="Tipus" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="text3" alignment="TOP_CENTER" prefHeight="172.0" text="AAAAAAAAAAAAAAAAAAAAAAAAAAAA" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" top="5.0" />
                </VBox.margin>
             </Label>
          </children>

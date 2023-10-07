@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerDesktop">
    <children>
-      <AnchorPane prefHeight="55.0" prefWidth="800.0" style="-fx-background-color: #95c3ff;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane maxHeight="55.0" prefHeight="55.0" prefWidth="800.0" style="-fx-background-color: #95c3ff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" layoutY="15.0" text="Nintendo DB" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
