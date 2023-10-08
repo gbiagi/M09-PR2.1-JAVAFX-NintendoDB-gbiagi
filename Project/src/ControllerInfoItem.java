@@ -4,7 +4,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-
 import java.awt.*;
 
 public class ControllerInfoItem {
@@ -18,8 +17,6 @@ public class ControllerInfoItem {
     private Label text2 = new Label();
     @FXML
     private Label text3 = new Label();
-    @FXML
-    private Label text4 = new Label();
     @FXML
     private Rectangle cuadradoColor = new Rectangle();
 
@@ -59,10 +56,5 @@ public class ControllerInfoItem {
 
         // Estableix el contingut del Label
         this.text3.setText(text);
-    }
-    public void setText4(String text) {
-
-        // Estableix el contingut del Label
-        this.text4.setText(text);
     }
 }

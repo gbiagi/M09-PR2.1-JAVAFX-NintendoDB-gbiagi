@@ -34,7 +34,7 @@ public class ControllerDesktop implements Initializable {
         choiceBox.setValue(opcions[0]);
         // Callback que se ejecuta cuando el usuario escoge una opcion
         choiceBox.setOnAction((event) -> {loadList(); });
-        // Cargar aytinatucanebte kis datis de "Personajes"
+        // Cargar automaticamente los datos de "Personajes"
         loadList();
     }
     public void loadList() {
@@ -85,7 +85,6 @@ public class ControllerDesktop implements Initializable {
                 itemTemplate.setOnMouseClicked(event -> {
                     showInfo(type, index);
                 });
-
                 yPane.getChildren().add(itemTemplate);
             }
         }
@@ -99,13 +98,10 @@ public class ControllerDesktop implements Initializable {
         yPane.getChildren().add(progressIndicator);
     }
     void showInfo(String type, int index) {
-
         // Obtenir una referència a l'ojecte AppData que gestiona les dades
         AppData appData = AppData.getInstance();
-
         // Obtenir les dades de l'opció seleccionada
         JSONObject dades = appData.getItemData(type, index);
-
         // Carregar la plantilla
         URL resource = null;
         switch (type) {
@@ -119,10 +115,8 @@ public class ControllerDesktop implements Initializable {
                 resource = this.getClass().getResource("assets/template_info_item_personatge.fxml");
                 break;
         }
-
         // Esborrar la informació actual
         info.getChildren().clear();
-
         // Carregar la llista amb les dades
         try {
             FXMLLoader loader = new FXMLLoader(resource);
@@ -135,7 +129,7 @@ public class ControllerDesktop implements Initializable {
                     itemController.setText1(dades.getString("data"));
                     itemController.setCuadradoColor(Color.valueOf(dades.getString("color")));
                     itemController.setText2("Procesador: " + dades.getString("procesador"));
-                    itemController.setText3("Venudes: " + String.valueOf(dades.getInt("venudes")));
+                    itemController.setText3("Venudes: " + dades.getInt("venudes"));
                     break;
                 case "Jocs":
                     itemController.setText1(dades.getString("tipus"));
